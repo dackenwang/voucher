@@ -122,12 +122,12 @@ public class VoucherController extends AbstractController {
         else  response.sendError(HttpStatus.BAD_REQUEST.value(),"文件必须为xlsx格式");
     }
 
-    @GetMapping("/check")
-    @Operation(summary = "检查传票凭证号是否存在",description = "检查传票凭证号是否存在")
-    @Authorize({"MSA_USER","MSA_ADMIN"})
-    public boolean existsVoucher(@RequestParam("tranNo") String tranNo) {
-        return voucherService.existsByTranNo(tranNo);
-    }
+//    @GetMapping("/check")
+//    @Operation(summary = "检查传票凭证号是否存在",description = "检查传票凭证号是否存在")
+//    @Authorize({"MSA_USER","MSA_ADMIN"})
+//    public boolean existsVoucher(@RequestParam("tranNo") String tranNo) {
+//        return voucherService.existsByTranNo(tranNo);
+//    }
 
 
 }
